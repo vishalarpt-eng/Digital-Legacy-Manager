@@ -27,10 +27,9 @@ class DigitalWill(BaseModel):
 @app.get("/")
 def home():
     return {
-        "message": "Digital Legacy Manager - Contributor B",
+        "message": "Digital Legacy Manager - Contributors A and B",
         "status": "running"
     }
-
 @app.get("/health")
 def health():
     return {"status": "healthy"}
