@@ -83,3 +83,17 @@ def create_will(will: DigitalWill):
         "message": "Digital will created successfully",
         "will": will.model_dump()
     }
+
+@app.get("/assets/search/{keyword}")
+def search_assets(keyword: str):
+    assets = load_assets()
+
+    results = [
+        asset for asset in assets
+        if keyword.lower() in asset["asset_name"].lower()
+    ]
+
+    return {
+        "keyword": keyword,
+        "results": results
+    }
