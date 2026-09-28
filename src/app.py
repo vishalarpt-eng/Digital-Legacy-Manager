@@ -36,9 +36,26 @@ def home():
 def health():
     return {"status": "healthy"}
 
-
 @app.post("/assets")
 def create_asset(asset: Asset):
+    if not asset.owner.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Owner cannot be empty"
+        )
+
+    if not asset.asset_name.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Asset name cannot be empty"
+        )
+
+    if not asset.beneficiary.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Beneficiary cannot be empty"
+        )
+
     assets = load_assets()
 
     new_asset = {
