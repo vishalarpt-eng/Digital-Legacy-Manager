@@ -47,3 +47,11 @@ Open http://127.0.0.1:8000/docs
 ## Run Tests
 
     python -m pytest -v
+
+## Version History
+
+### Version 1.0
+- Initial project setup
+- Added FastAPI application
+- Added digital asset management
+- Added digital will endpoint
