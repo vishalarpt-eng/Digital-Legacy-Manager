@@ -55,3 +55,12 @@ Open http://127.0.0.1:8000/docs
 - Added FastAPI application
 - Added digital asset management
 - Added digital will endpoint
+
+ ## Project Team
+
+Project: Digital Legacy Manager
+
+Developer: VISHAL ADITYA RAMESH
+
+Purpose: Demonstrate Git and GitHub collaboration,
+branching, merging, and conflict resolution.
